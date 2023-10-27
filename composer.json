@@ -1,0 +1,32 @@
+{
+    "name": "mageinic/product-attachment-graph-ql",
+    "description": "Product Attachment GraphQl by MageINIC Team",
+    "require": {
+        "php": "^8.0",
+        "magento/module-catalog": "104.0.*",
+        "magento/framework": "103.0.*",
+        "magento/module-graph-ql": "100.4.*",
+        "mageinic/product-attachment": "1.0.0",
+        "magento/module-catalog-graph-ql": "100.4.6"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "Commercial"
+    ],
+    "authors": [
+        {
+            "name": "MageINIC",
+            "email": "support@mageinic.com",
+            "homepage": "https://www.mageinic.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageINIC\\ProductAttachmentGraphQl\\": ""
+        }
+    }
+}

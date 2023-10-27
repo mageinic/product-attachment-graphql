@@ -1,0 +1,44 @@
+# MageINIC
+# Copyright (C) 2023 MageINIC <support@mageinic.com>
+#
+# NOTICE OF LICENSE
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html.
+#
+# Do not edit or add to this file if you wish to upgrade this extension to newer
+# version in the future.
+#
+# @category MageINIC
+# @package MageINIC_ProductAttachmentGraphQl
+# @copyright Copyright (c) 2023 MageINIC (https://www.mageinic.com/)
+# @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+# @author MageINIC <support@mageinic.com>
+
+type StoreConfig {
+    productattachment_enable : String @doc(description: "Enable ProductAttachment")
+    productattachment_tabname : String @doc(description: "ProductAttachment Tab Name")
+    productattachment_file_size_validation : String @doc(description: "ProductAttachment File Size")
+}
+
+interface ProductInterface {
+    product_attachment: ProductAttachmentOutput
+    @doc(description: "Product Attachment")
+    @resolver(class: "MageINIC\\ProductAttachmentGraphQl\\Model\\Resolver\\ProductAttachment")
+}
+
+type ProductAttachmentOutput @doc(description: "An array containing all the items options"){
+    items: [ProductAttachment] @doc(description: "The number of records returned.")
+}
+
+type ProductAttachment {
+    title: String @doc(description: "title of the product attachment")
+    description: String @doc(description: "description of the product attachment")
+    icon: String @doc(description: "File icon of the product attachment")
+    url: String @doc(description: "url of the product attachment")
+}

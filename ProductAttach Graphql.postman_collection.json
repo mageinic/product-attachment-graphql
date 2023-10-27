@@ -1,0 +1,54 @@
+{
+  "info": {
+    "_postman_id": "8a5632ad-7c1b-4d2a-87de-2680a001f44c",
+    "name": "ProductAttachment Graphql",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Product Attach Graphql",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "{\n  products(filter: { sku: { eq: \"24-MB04\"} }) {\n    items {\n      name\n      sku\n      product_attachment {\n        items {\n          title\n          description\n          url\n        }\n      }\n      price_range {\n        minimum_price {\n          regular_price {\n            value\n            currency\n          }\n          final_price {\n            value\n            currency\n          }\n          discount {\n            amount_off\n            percent_off\n          }\n        }\n        maximum_price {\n          regular_price {\n            value\n            currency\n          }\n          final_price {\n            value\n            currency\n          }\n          discount {\n            amount_off\n            percent_off\n          }\n        }\n      }\n    }\n  }\n}\n",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/graphql",
+          "host": [
+            "{{baseurl}}"
+          ],
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Product Attchment Backend Configuration",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "{\n  storeConfig {\n    productattachment_enable\n    productattachment_tabname\n    productattachment_file_size_validation\n }\n}\n",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "{{baseurl}}/graphql",
+          "host": [
+            "{{baseurl}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
