@@ -1,6 +1,6 @@
 {
     "name": "mageinic/product-attachment-graph-ql",
-    "description": "Product Attachment GraphQl by MageINIC Team",
+    "description": "Product Attachment GraphQL is a part of MageINIC Product Attachment extension that adds GraphQL features. This extension extends Product Attachment definitions.",
     "require": {
         "php": "^8.0",
         "magento/module-catalog": "104.0.*",
@@ -12,7 +12,8 @@
     "type": "magento2-module",
     "version": "1.0.0",
     "license": [
-        "Commercial"
+        "OSL-3.0",
+        "AFL-3.0"
     ],
     "authors": [
         {
