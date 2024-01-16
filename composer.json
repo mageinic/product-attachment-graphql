@@ -1,5 +1,5 @@
 {
-    "name": "mageinic/product-attachment-graph-ql",
+    "name": "mageinic/product-attachment-graphql",
     "description": "Product Attachment GraphQL is a part of MageINIC Product Attachment extension that adds GraphQL features. This extension extends Product Attachment definitions.",
     "require": {
         "php": "^8.0",

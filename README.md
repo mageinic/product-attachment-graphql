@@ -7,7 +7,7 @@
 Run the following command in Magento 2 root folder:
 
 ```
-composer require mageinic/product-attachment-graph-ql
+composer require mageinic/product-attachment-graphql
 
 php bin/magento maintenance:enable
 php bin/magento setup:upgrade
